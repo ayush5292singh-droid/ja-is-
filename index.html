@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JARVIS // Command Interface</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="bootScreen">
+    <div class="bootCore"></div>
+    <div class="bootTitle">J.A.R.V.I.S</div>
+    <div id="bootText">INITIALIZING SYSTEM...</div>
+    <div class="bootBar">
+        <span id="bootProgress"></span>
+    </div>
+</div>
+
+<main id="interface">
+
+    <header class="topbar">
+        <div class="brand">
+            <span class="brandMark">J</span>
+            <div>
+                <strong>JARVIS</strong>
+                <small>PERSONAL COMMAND SYSTEM</small>
+            </div>
+        </div>
+
+        <div class="systemState">
+            <span class="statusDot"></span>
+            <span id="systemStatus">SYSTEM ONLINE</span>
+        </div>
+
+        <div class="clock" id="clock">00:00:00</div>
+    </header>
+
+    <section class="hud">
+
+        <aside class="leftPanel">
+
+            <div class="telemetry">
+                <div class="sectionLabel">SYSTEM TELEMETRY</div>
+
+                <div class="metric">
+                    <span>CPU LOAD</span>
+                    <strong id="cpu">--%</strong>
+                    <div class="line"><i id="cpuBar"></i></div>
+                </div>
+
+                <div class="metric">
+                    <span>MEMORY</span>
+                    <strong id="memory">--%</strong>
+                    <div class="line"><i id="memoryBar"></i></div>
+                </div>
+
+                <div class="metric">
+                    <span>NETWORK</span>
+                    <strong id="network">ONLINE</strong>
+                    <div class="line"><i class="staticBar"></i></div>
+                </div>
+
+                <div class="metric">
+                    <span>VOICE CORE</span>
+                    <strong id="voiceState">STANDBY</strong>
+                    <div class="line"><i id="voiceBar"></i></div>
+                </div>
+            </div>
+
+            <div class="commandHistory">
+                <div class="sectionLabel">COMMAND STREAM</div>
+                <div id="history"></div>
+            </div>
+
+        </aside>
+
+
+        <section class="reactorArea">
+
+            <div class="targetRing ring1"></div>
+            <div class="targetRing ring2"></div>
+            <div class="targetRing ring3"></div>
+
+            <div class="scanner scannerA"></div>
+            <div class="scanner scannerB"></div>
+
+            <div class="reactor">
+
+                <div class="reactorOuter"></div>
+                <div class="reactorMid"></div>
+
+                <div class="reactorCore">
+                    <div class="corePulse"></div>
+                    <span>J</span>
+                </div>
+
+            </div>
+
+            <div class="coreData">
+                <span>ARC COMMAND CORE</span>
+                <strong id="coreState">ONLINE</strong>
+            </div>
+
+            <div class="coordinates">
+                X <span id="coordX">000</span>
+                &nbsp; Y <span id="coordY">000</span>
+                &nbsp; Z <span id="coordZ">000</span>
+            </div>
+
+        </section>
+
+
+        <aside class="rightPanel">
+
+            <div class="module">
+                <div class="sectionLabel">NEURAL ACTIVITY</div>
+
+                <div class="wave" id="wave">
+                    <i></i><i></i><i></i><i></i><i></i>
+                    <i></i><i></i><i></i><i></i><i></i>
+                    <i></i><i></i><i></i><i></i><i></i>
+                    <i></i><i></i><i></i><i></i><i></i>
+                </div>
+
+                <div class="listeningText" id="listeningText">
+                    SAY <b>“JARVIS”</b> TO ACTIVATE
+                </div>
+            </div>
+
+
+            <div class="module diagnostics">
+
+                <div class="sectionLabel">CORE DIAGNOSTICS</div>
+
+                <p>VOICE RECOGNITION <b>READY</b></p>
+                <p>COMMAND ENGINE <b>READY</b></p>
+                <p>WEB NAVIGATION <b>READY</b></p>
+                <p>AUTOMATION <b>STANDBY</b></p>
+                <p>SECURITY <b class="amber">ACTIVE</b></p>
+
+            </div>
+
+        </aside>
+
+    </section>
+
+
+    <section class="commandArea">
+
+        <div class="commandHeader">
+            <span>COMMAND INTERFACE</span>
+            <span id="mode">VOICE MODE</span>
+        </div>
+
+        <div class="commandDisplay">
+            <span class="prompt">JARVIS ></span>
+            <span id="commandOutput">Awaiting instruction...</span>
+        </div>
+
+        <div class="inputRow">
+
+            <div class="micIndicator" id="micIndicator">
+                <span></span>
+            </div>
+
+            <input
+                id="commandInput"
+                type="text"
+                autocomplete="off"
+                placeholder="Speak naturally or type a command..."
+            >
+
+            <button id="micButton" title="Start voice recognition">
+                MIC
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+        <span>JARVIS CORE v1.0</span>
+        <span>LOCAL COMMAND INTERFACE</span>
+        <span class="amber">● SECURE</span>
+    </footer>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
